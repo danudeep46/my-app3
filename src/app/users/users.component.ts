@@ -62,7 +62,7 @@ page(){
   )
 }
 delete(id:string){
- this._userService.deleteUser(id).subscribe(
+ this._userService.deleteUsers(id).subscribe(
   (data:any)=>{
     alert("deleted")
     location.reload();
