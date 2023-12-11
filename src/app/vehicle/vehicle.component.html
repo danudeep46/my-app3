@@ -1,0 +1,56 @@
+<input type="text" (keypress)="getFilteredUsers()" placeholder="Search" [(ngModel)]="or">
+<br>
+<label for="">name</label>
+<select [(ngModel)]="name" >
+    <option >Vehicle</option>
+    <option >type</option>
+</select>
+<label for="">order</label>
+<select [(ngModel)]="order" >
+    <option>asc</option>
+    <option >desc</option>
+</select>
+<button (click)="sort()">Sort</button>
+<br>
+<select [(ngModel)]="pageno">
+    <option >1</option>
+    <option >2</option>
+    <option >3</option>
+    <option >4</option>
+    <option >5</option>
+    <option >6</option>
+</select>
+<button (click)="page()">Page</button>
+<table class="table">
+    <thead>
+        <tr>
+            <th>Vehicle</th>
+            <th>model</th>
+            <th>type</th>
+            <th>fuel</th>
+            <th>color</th>
+            <th>image</th>
+            <th>id</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let vehicles of vehicle">
+            <td>{{vehicles.Vehicle}}</td>
+            <td>{{vehicles.model}}</td>
+            <td>{{vehicles.type}}</td>
+            <td>{{vehicles.fuel}}</td>
+            <td>{{vehicles.color}}</td>
+            <td>
+                <img src="{{vehicles.image}}" alt="">
+            </td>
+            <td>{{vehicles.id}}</td>
+            <button (click)="delete(vehicles.id)">Delte</button>
+            
+           
+
+        </tr>
+    </tbody>
+</table>
+
+

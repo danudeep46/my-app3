@@ -1,0 +1,23 @@
+<h1>CREATE USER FORM</h1>
+<form [formGroup]="userForm">
+    <label >account_name</label>
+    <input type="text" formControlName="account_name">
+    <br>
+    <label >available_balance</label>
+    <input type="text" formControlName="available_balance">
+    <br>
+    <label >account_number</label>
+    <input type="text" formControlName="account_number">
+
+    <br>
+    <label >city</label>
+    <input type="text" formControlName="city">
+     <br>
+    <label >profie_picture</label>
+    <input type="text" formControlName="profie_picture">
+    <br>
+ 
+ <button (click)="submit()">Submit</button>
+   
+    <br>
+</form>

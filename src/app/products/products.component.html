@@ -1,0 +1,88 @@
+<body>
+    <div class="parent">
+        <div class="child1">
+
+            <div class="left">
+                <input id="search" (keypress)="anud()" class="ins" type="search" placeholder="Search" [(ngModel)]="search" >           <!-- <button (click)="search1()">Search</button> -->
+                <button (click)="showOnlyFreeDelivery()" class="free">Only free delivery</button>
+                <br>
+                <br>
+                <div class="buttons">
+                    <button (click)="lowtohigh()" class="yellow">Price LOw To high</button>
+                    <button (click)="hightolow()" class="yellow">Price high To low</button>
+                    <button (click)="ratinghightolow()" class="yellow">Rating low to high</button>
+                    <button (click)="ratinglowtohigh()" class="yellow">Rating high to low</button>
+                </div>
+                <br>
+                <br>
+                <div class="buttons1">
+                    <button (click)="discount()" class="apply">Apply 50% discount</button>
+                    <button (click)="pricewithdelivery()" class="apply">Price with delivery charges</button>
+                </div>
+                <br>
+                <br>
+                <div class="button3">
+                    <button (click)="totalprice()" class="black">total price</button>
+                    <button (click)="Totalcartitems()" class="black">Total cart items</button>
+                <h4>{{this.result}}</h4>
+                </div>
+            </div>
+            <div class="right">
+          
+<label for="">name</label>
+<input id="name" type="text" [(ngModel)]="name">
+<br>
+<br>
+<label for="">Price</label>
+<input id="price" type="number"  [(ngModel)]="price">
+<br>
+<br>
+<label for="">Rating</label>
+<input id="rating" type="number" id="" [(ngModel)]="rating">
+<br>
+<br>
+<label for="">Free Delivery</label>
+<input type="radio" name="and" [(ngModel)]="freedelivery" value="yes">
+<label for="">YES</label>
+<input type="radio" name="and"  [(ngModel)]="freedelivery" value="no">
+<label for="">NO</label>
+<br>
+<br>
+<button (click)="Addtocart()" class="addtocart">Add To Cart</button>
+
+
+            </div>
+        </div>
+    </div>
+    <div class="child2">
+       
+<table table class="table-table-dark" >
+    <thead>
+        <tr>
+            <th>S.NO</th>
+            <th>Product Name</th>
+            <th>Price</th>
+            <th>Rating</th>
+            <th>Free Delivery</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let product of Products; let i=index">
+            <td>{{i+1}}</td>
+            <td>{{product.name}}</td>
+            <td>{{product.price}}</td>
+            <td>{{product.rating}}</td>
+            <td>{{product.freedelivery}}</td>
+            <td><button (click)="delete(i)">Delete</button></td>
+        </tr>
+    </tbody>
+
+</table>
+
+
+
+    </div>
+
+    
+</body>

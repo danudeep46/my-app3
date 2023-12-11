@@ -1,0 +1,23 @@
+form{
+    height: 100%;
+    width: 100%;
+    display: inline-block;
+    justify-content: center;
+    align-items: center;
+    /* text-align: center; */
+  
+}
+label{
+    display: inline-block;
+    width: 50px;
+    height: 15px;
+     margin: 50px; 
+
+}
+input{
+    margin: 10px;
+   
+}
+button{
+margin-left: 100px;
+}

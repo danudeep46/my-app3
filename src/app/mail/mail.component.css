@@ -1,0 +1,9 @@
+tr{
+    height: 50px;
+    width: 50px;
+}
+table{
+    display:inline block;
+    justify-content: space-around;
+    align-items: center;
+}

@@ -1,0 +1,112 @@
+
+<h1>STUDENTS DETAILS</h1>
+<br>
+<br>
+
+<form [formGroup]="userForm">
+    <label>Student Name</label>
+    <input type="text" formControlName="sname">
+    
+        <div *ngIf="userForm.get('sname')?.touched || userForm.get('sname')?.dirty">
+            <p *ngIf="userForm.get('sname')?.errors?.['required']">Enter student name</p>
+            <p *ngIf="userForm.get('sname')?.errors?.['minlength']">Min Length 3 chars</p>
+            <p *ngIf="userForm.get('sname')?.errors?.['maxlength']">Max Length 10 chars</p>
+
+        </div>
+    <br>
+    <label>Class</label>
+    <input type="number" formControlName="class">
+    <div *ngIf="userForm.get('class')?.touched || userForm.get('class')?.dirty">
+        <p *ngIf="userForm.get('class')?.errors?.['required']">Enter Class name </p>
+        <p *ngIf="userForm.get('class')?.errors?.['min']">Min Length 1 Number </p>
+        <p *ngIf="userForm.get('class')?.errors?.['max']">Max Length 2 Number </p>
+
+    </div>
+    <br>
+    <label>Father Name</label>
+    <input type="text" formControlName="fname">
+    <div *ngIf="userForm.get('fname')?.touched || userForm.get('fname')?.dirty">
+        <p *ngIf="userForm.get('fname')?.errors?.['required']">Enter Father name </p>
+        <p *ngIf="userForm.get('fname')?.errors?.['minlength']">Min Length 3 chars </p>
+        <p *ngIf="userForm.get('fname')?.errors?.['maxlength']">Max Length 10 chars </p>
+
+    </div>
+    <br>
+    <label>Email</label>
+    <input type="email" formControlName="email">
+    <div *ngIf="userForm.get('email')?.touched || userForm.get('email')?.dirty">
+        <p *ngIf="userForm.get('email')?.errors?.['required']">Enter Email</p>
+        <p *ngIf="userForm.get('email')?.errors?.['email']">Invalid Email</p>
+       
+
+    </div>
+    <br>
+    <label>DoB</label>
+    <input type="date" formControlName="dob"> 
+    <br>
+    <div formGroupName="address">
+    <label>Address</label>
+    <input type="text" formControlName="addressLine">
+    <div *ngIf="userForm.get('address')?.get('addressLine')?.touched || userForm.get('address')?.get('addressLine')?.dirty">
+        <p *ngIf="userForm.get('address')?.get('addressLine')?.errors?.['required']">Enter Valid Adress </p>
+        <p *ngIf="userForm.get('address')?.get('addressLine')?.errors?.['minlength']">Min Length 3 chars </p>
+        <p *ngIf="userForm.get('address')?.get('addressLine')?.errors?.['maxlength']">Max Length 10 chars </p>
+
+    </div>
+    <br>
+    <label>City</label>
+    <input type="text" formControlName="city">
+    <br>
+    <label>State</label>
+    <input type="text" formControlName="state">
+    <br>
+    <label>Pincode</label>
+    <input type="number" formControlName="pincode">
+    <br>
+</div>
+<br>
+<button (click)=" Marksadd()">Add Marks</button>
+<br>
+<div formArrayName="marks">
+    <div *ngFor="let marks of marksFormArray.controls; let i=index">
+        <div formGroupName="{{i}}">
+            <label>Class</label>
+            <input type="text" formControlName="class">
+            <br><label>Year</label>
+            <input type="text" formControlName="year">
+            <br>
+            <label>Percentage</label>
+            <input type="text" formControlName="percentage">
+            <div *ngIf="marksFormArray.controls[i]?.get('percentage')?.touched || marksFormArray.controls[i]?.get('percentage')?.dirty">
+                <p *ngIf="marksFormArray.controls[i]?.errors?.['required']">Percentage is required</p>
+            </div>
+            <br>
+            <br>
+            <button (click)="delete(i)">Delete</button>
+        </div>
+    </div>
+</div>
+<br>
+<br><br>
+<br>
+
+<label>Days Scholar</label>
+<input class="q" type="radio" name="type" formControlName="type" value="dayScholar">
+<label>Residential</label>
+<input class="q" type="radio" name="type" formControlName="type" value="residential">
+
+<div *ngIf="userForm.get('type')?.value=='dayScholar'">
+<label>bus fee</label>
+<input type="number" name="type" formControlName="busfee">
+
+</div>
+<br>
+
+<div *ngIf="userForm.get('type')?.value=='residential'">
+<label>hostel fee</label>
+<input type="number" name="type" formControlName="hostelfee">
+</div>
+<br>
+
+<button (click)="submit()">Submit</button>
+   </form>

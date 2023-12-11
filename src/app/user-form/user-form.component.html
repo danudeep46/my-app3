@@ -1,0 +1,105 @@
+
+<h1>USER FORM DETAILS</h1>
+<form [formGroup]="userForm" >
+
+    <label>Name</label>
+    <input type="text" formControlName="name">
+    <div *ngIf="userForm.get('name')?.touched  || userForm.get('name')?.dirty">
+    <p *ngIf="userForm.get('name')?.errors?.['required']" > name is required </p>
+    <p *ngIf="userForm.get('name')?.errors?.['minlength']" > min 3 chars required </p>
+    <p *ngIf="userForm.get('name')?.errors?.['maxlength']" > max 10 chars required </p>
+</div>
+    <br>
+    
+    <label>Age</label>
+    <input type="number" formControlName="age">
+    <div *ngIf="userForm.get('age')?.touched  || userForm.get('age')?.dirty">
+        <p *ngIf="userForm.get('age')?.errors?.['required']" > Age is required </p>
+        <p *ngIf="userForm.get('age')?.errors?.['min']" > min 0  years </p>
+        <p *ngIf="userForm.get('age')?.errors?.['max']" > max 100  years </p>
+    </div>
+    <br>
+    
+    <label>Phone</label>
+    <input type="number" formControlName="phone">
+    <div *ngIf="userForm.get('phone')?.touched  || userForm.get('phone')?.dirty">
+        <p *ngIf="userForm.get('phone')?.errors?.['required']" > phone number is required </p>
+        <p *ngIf="userForm.get('phone')?.errors?.['min']" > m 10 chars required </p>
+        <p *ngIf="userForm.get('phone')?.errors?.['max']" > max 10 chars required </p>
+    </div>
+    <br>
+    
+    <label>Email</label>
+    <input type="email" formControlName="email">
+    <div *ngIf="userForm.get('email')?.touched  || userForm.get('email')?.dirty">
+        <p *ngIf="userForm.get('email')?.errors?.['required']" > email is required </p>
+        <p *ngIf="userForm.get('email')?.errors?.['email']" > Invalid email format </p>
+        
+    </div>
+    <br>
+
+
+    <div formGroupName="address">
+        <label>City</label>
+    <input type="text" formControlName="city">
+    <br>
+    
+    <label>Pincode</label>
+    <input type="number" formControlName="pincode">
+    <div *ngIf="userForm.get('address')?.get('pincode')?.touched  || userForm.get('address')?.get('pincode')?.dirty">
+        <p *ngIf="userForm.get('address')?.get('pincode')?.errors?.['required']" > Pincodeis required </p>
+        <p *ngIf="userForm.get('address')?.get('pincode')?.errors?.['min']" >atleast 6 digits</p>
+        <p *ngIf="userForm.get('address')?.get('pincode')?.errors?.['max']" > max 6  </p>
+        
+    </div>
+    <br>
+
+
+    </div>
+    <div formArrayName="cards">
+        <div *ngFor="let card of cardsFormArray.controls; let i=index">
+            <div formControlName="{{i}}">
+                <label>no</label>
+                <input type="number" formControlName="no">
+                <br>
+                <label>Expiry</label>
+                <input type="month" formControlName="expiry">
+                <br>
+                <label>CVV</label>
+                <input type="number" formControlName="cvv">
+                <div *ngIf="cardsFormArray.controls[i]?.get('cvv')?.touched || cardsFormArray.controls[i]?.get('cvv')?.dirty">
+                    <p *ngIf="cardsFormArray.controls[i]?.errors?.['required']">CVV is required</p>
+                </div>
+                <br>
+                <button (click)="delete(i)">Delete</button>
+                <hr>
+            </div>
+        </div>
+    </div>
+    <br>
+   
+    <label >Student</label>
+    <input type="radio" name="type" formControlName="type" value="dayScholar">
+    <label Day Scholar></label>
+    <input type="radio" name="type" formControlName="type" value="residential">
+    <label >Residential</label>
+    <br>
+
+    <div *ngIf="userForm.get('type')?.value=='dayScholar'">
+        <label>Bus Fee</label>
+        <input type="number" formControlName="busfee">
+        <br>
+    </div>
+   
+    <br>
+    <div *ngIf="userForm.get('type')?.value=='residential'">
+        <label >Hostel Fee:</label>
+    <input type="number" formControlName="hostelfee">
+    <br>
+    </div>
+    <br>
+    
+    <button (click)="add()">Add Card</button>
+
+    <button (click)="submit()">submit</button>
+</form>

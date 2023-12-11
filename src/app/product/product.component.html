@@ -1,0 +1,70 @@
+
+<h1>{{name}}</h1>
+<input type="text" [id]="courseID">
+<button (click)="onclick()">click</button>
+<h2>{{alert}}</h2>
+<input type="text" [(ngModel)]="data">
+<button (click)="click()">clear</button>
+<h3>{{data}}</h3>
+<label for="">Number1:</label>
+<input type="number" [(ngModel)]="num1">
+<br>
+<br>
+<label for="">Number2:</label>
+<input type="number" [(ngModel)]="num2">
+<br>
+<br>
+<button (click)="sum()">sum</button>
+<h1>{{result}}</h1>
+
+<br>
+<br>
+
+
+<h1 style="color: yellowgreen;">Rectangle</h1>
+<label for="">Length:</label>
+<input type="number" [(ngModel)]="num11">
+<br>
+<br>
+<label for="" style="color: blue;"><b>Breath:</b></label>
+<input type="number" [(ngModel)]="num22">
+<br>
+<br>
+<button (click)="area()" style="background-color: black; color: white;">Area</button>
+<button (click)="per()">Perimeter</button>
+<h1 style="color: rgb(4, 0, 255);">Area is <span style="color: rgb(185, 12, 12);"> {{result1}}</span></h1>
+<h1 style="color: red;">Perimeter is <span style="color: blue;">{{result2}}</span></h1>
+<br>
+<br>
+<h1 style="color: yellowgreen;">Circle</h1>
+<label for="">Length:</label>
+<input type="number" [(ngModel)]="num111">
+<br>
+<br>
+ <label for="" style="color: blue;"><b>Breath:</b></label> 
+ <input type="number" [(ngModel)]="num222"> 
+<br>
+<br>
+<button (click)="area1()" style="background-color: black; color: white;">Area</button>
+<button (click)="per1()">Perimeter</button>
+<h1 style="color: rgb(4, 0, 255);">Area is <span style="color: rgb(136, 7, 7);"> {{result11}}</span></h1>
+<h1 style="color: red;">Perimeter is <span style="color: blue;">{{result22}}</span> </h1>
+<br>
+<br>
+<br>
+
+
+<h1 style="color: yellowgreen;">B M I</h1>
+<label for="">Height:</label>
+<input type="number" [(ngModel)]="num8">
+<br>
+<br>
+<label for="" style="color: blue;"><b>Weight:</b></label>
+<input type="number" [(ngModel)]="num9">
+<br>
+<br>
+<button (click)="cal()" style="background-color: black; color: white;">Calculate</button>
+<h1 style="color: rgb(4, 0, 255);">Area is <span style="color: rgb(185, 12, 12);"> {{result7}}</span></h1>
+<br>
+<br>
+

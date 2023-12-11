@@ -1,0 +1,76 @@
+.parent {
+    height: 100%;
+    width: 100%;
+    background-color: white;
+    box-sizing: border-box;
+    /* padding: 10px; */
+}
+
+.child1 {
+    height: 45%;
+    width: 96%;
+    background-color: rgb(245, 252, 251);
+    padding: 20px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+
+}
+
+.child2 {
+    height: 55%;
+    width: 96%;
+    background-color: rgb(189, 115, 115);
+}
+
+.buttons {}
+
+.left {
+    height: 100%;
+    width: 48%;
+    padding: 5px;
+    background-color: rgb(32, 178, 56);
+}
+
+.right {
+    height:100%;
+    width: 35%;
+    background-color: rgb(32, 178, 51);
+    padding: 5px
+}
+
+.button3 {}
+
+.yellow {
+    background-color: yellow;
+    height: 30px;
+}
+
+.black {
+    background-color: black;
+    height: 30px;
+    color: white;
+}
+
+.free {
+    height: 30px;
+    background-color: blue;
+    color: white;
+}
+
+.ins {
+    height: 30px;
+}
+
+.addtocart {
+    height: 30px;
+    background-color: green;
+    color: white;
+    margin-left: 20px;
+}
+
+.apply {
+    color: white;
+    background-color: darkcyan;
+    height: 30px;
+}

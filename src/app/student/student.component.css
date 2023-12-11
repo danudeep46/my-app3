@@ -1,0 +1,39 @@
+label{
+    display: inline-block;
+    font-size: large;
+    font-weight: 700;
+    width: 150px;
+    height: 10px;
+    margin-bottom: 20px;
+    padding: 25px;
+    border: 0px solid gray;
+}
+h1{
+    text-align: center;
+    color: red;
+}
+button{
+   margin-left: 150px;
+   background-color: blue;
+   border-radius: 15px;
+   width: 150px;
+   height: 35px;
+}
+input{
+    border-radius: 10px;
+    height: 35px;
+    width: 300px;
+}
+p{
+    color: white;
+    background-color:black;
+    width: 150px;
+    padding: 10px;
+    font-weight: bold;
+    /* text-align: center; */
+    margin-left: 200px;
+}
+.q{
+    width: 50px;
+    height: 25px;
+}

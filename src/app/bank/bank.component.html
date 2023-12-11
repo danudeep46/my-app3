@@ -1,0 +1,65 @@
+<div class="a" >
+
+<div *ngFor="let banks of bank">
+    <p>
+        <img src="{{banks.image}}" alt="">
+    </p>
+    <div class="parent" >
+    <p>id :{{banks.id}}</p>
+    <p>firstName :{{banks.firstName}}</p>
+    <p>maidenName :{{banks.maidenName}}</p>
+    <p>age :{{banks.age}}</p>
+    <p>gender :{{banks.gender}}</p>
+    <p>email :{{banks.email}}</p>
+    <p>phone :{{banks.phone}}</p>
+    <p>userName :{{banks.userName}}</p>
+    <p>password :{{banks.password}}</p>
+    <p>birthDate :{{banks.birthDate}}</p>
+   
+    <p>bloodGroup :{{banks.bloodGroup}}</p>
+    <p>height :{{banks.height}}</p>
+    <p>weight :{{banks.weight}}</p>
+    <p>eyeColor :{{banks.eyeColor}}</p>
+</div>
+
+<div>
+    <p>hair :</p>
+    <p>color :{{banks.hair.color}}</p>
+    <p>type :{{banks.hair.type}}</p>
+</div>
+
+<div>
+    <p>domain :{{banks.domain}}</p>
+    <p>ip {{banks.ip}}</p>
+</div>
+<div>
+    <p>address :{{banks.address.address}}</p>
+    <p>city:{{banks.address.city}}</p>
+    <p>coordinates:</p>
+    <p>lat :{{banks.address.coordinates.lat}}</p>
+    <p>lng :{{banks.address.coordinates.lng}}</p>
+    <p>postalCode :{{banks.address.postalCode}}</p>
+    <p>state :{{banks.address.state}}</p>
+</div>
+
+<div>
+    <p>bank :</p>
+<p>cardExpire :{{banks.bank.cardExpire}}</p>
+<p>cardNumber :{{banks.bank.cardNumber}}</p>
+<p>cardType :{{banks.bank.cardType}}</p>
+<p>currency :{{banks.bank.currency}}</p>
+<p>iban :{{banks.bank.iban}}</p>
+</div>
+
+
+    <p>department :{{banks.company.department}}</p>
+    <p>name :{{banks.company.name}}</p>
+    <p>tittle :{{banks.company.title}}</p>
+    <p>ein :{{banks.ein}}</p>
+    <p>ssn :{{banks.ssn}}</p>
+    <p>userAgent :{{banks.userAgent}}</p>
+   
+
+</div>
+
+</div>
