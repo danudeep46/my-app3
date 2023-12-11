@@ -26,6 +26,7 @@ import { CreateUserComponent } from './create-user/create-user.component';
 import { UserFormComponent } from './user-form/user-form.component';
 import { StudentComponent } from './student/student.component';
 import { AuthenticationGuard } from './authentication.guard';
+import { NotiGuard } from './noti.guard';
 const routes: Routes = [
   {path: 'login', component:LoginComponent},
    {path: '', component:LoginComponent},
@@ -39,14 +40,14 @@ const routes: Routes = [
     {path: 'pipes',component:PipesComponent},
     {path:'event',component:EventComponent},
     {path:'car',component:CarsComponent},
-    {path:'create-user',component:CreateUserComponent},
+    {path:'create-user', canActivateChild:[NotiGuard],component:CreateUserComponent},
     {path:'bank',component:BankComponent},
     {path:'vehicle',component:VehiclesComponent},
     {path:'products',component:ProductsComponent},
    {path:'anudeep',component:AnudeepComponent},
    {path:'student',component:StudentComponent},
    {path:'flipkart',component:FlipkartComponent},
-   {path:'user-form',component:UserFormComponent},
+   {path:'user-form', canDeactivate:[NotiGuard],component:UserFormComponent},
    {path:'mail',component:MailComponent},
    {path:'activity',component:ActivityComponent},
     {path: 'StructuralDirectives', component:StructuralDirectivescomponentComponent},
