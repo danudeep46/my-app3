@@ -27,6 +27,7 @@ import { UserFormComponent } from './user-form/user-form.component';
 import { StudentComponent } from './student/student.component';
 import { AuthenticationGuard } from './authentication.guard';
 import { NotiGuard } from './noti.guard';
+import { UserDetailsComponent } from './user-details/user-details.component';
 const routes: Routes = [
   {path: 'login', component:LoginComponent},
    {path: '', component:LoginComponent},
@@ -50,6 +51,8 @@ const routes: Routes = [
    {path:'user-form', canDeactivate:[NotiGuard],component:UserFormComponent},
    {path:'mail',component:MailComponent},
    {path:'activity',component:ActivityComponent},
+   {path:"user-details/:id",component:UserDetailsComponent},
+   {path:"create-user/:id",component:CreateUserComponent},
     {path: 'StructuralDirectives', component:StructuralDirectivescomponentComponent},
 ]},
 ];

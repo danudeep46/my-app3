@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { UserService } from '../user.service';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-users',
@@ -14,7 +15,7 @@ export class UsersComponent {
   public column:string='';
  public pageno:number=0;
   public order:string='';
-  constructor(private _userService:UserService){
+  constructor(private _userService:UserService, private _router:Router){
   _userService.getUsers().subscribe(
     (data:any)=>{
       this.users=data;
@@ -71,6 +72,12 @@ delete(id:string){
     alert("error");
   }
  )
+}
+view(id:number){
+  this._router.navigateByUrl("/dashboard/user-details/"+id);
+}
+edit(id:number){
+  this._router.navigateByUrl("/dashboard/create-user/"+id);
 }
 
 

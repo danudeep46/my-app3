@@ -21,3 +21,8 @@ input{
 button{
 margin-left: 100px;
 }
+button{
+    background-color: red;
+    color: white;
+    font-weight: 700;
+}

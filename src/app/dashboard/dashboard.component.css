@@ -14,7 +14,7 @@ text-align: center;
 .right{
     width: 75%;
 height: 100%;
-overflow: scroll;
+/* overflow: scroll; */
 background-color: aqua;
 }
 h1{

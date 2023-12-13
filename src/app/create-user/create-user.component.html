@@ -1,23 +1,24 @@
-<h1>CREATE USER FORM</h1>
+<h1 *ngIf="!id">CREATE USER FORM</h1>
+<h1 *ngIf="id">EDIT USER FORM</h1>
 <form [formGroup]="userForm">
-    <label >account_name</label>
-    <input type="text" formControlName="account_name">
+    <label >Name</label>
+    <input type="text" formControlName="name">
     <br>
-    <label >available_balance</label>
-    <input type="text" formControlName="available_balance">
+    <label >Phone</label>
+    <input type="text" formControlName="phone">
     <br>
-    <label >account_number</label>
-    <input type="text" formControlName="account_number">
+    <label >City</label>
+    <input type="text" formControlName="city">
 
     <br>
-    <label >city</label>
-    <input type="text" formControlName="city">
+    <label >Fee</label>
+    <input type="text" formControlName="fee">
      <br>
-    <label >profie_picture</label>
-    <input type="text" formControlName="profie_picture">
+    <label >Image</label>
+    <input type="text" formControlName="image">
     <br>
  
- <button (click)="submit()">Submit</button>
+ <button (click)="submit()">{{id ? 'Update' : 'Create'}}</button>
    
     <br>
 </form>
