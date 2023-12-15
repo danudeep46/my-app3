@@ -1,0 +1,29 @@
+.parent{
+    /* position:relative; */
+    padding: 50px;
+}
+.text{
+    position: absolute;
+ 
+    
+}
+p{
+   
+   
+    
+    
+}
+.child{
+    
+   position: relative;
+   left: 197px;
+   bottom: -120px;
+   
+color: blue;
+font-weight: 700;
+
+}
+.c{
+    color: red;
+    font-weight: 900;
+}
