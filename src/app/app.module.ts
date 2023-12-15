@@ -35,6 +35,10 @@ import { VehDetailsComponent } from './veh-details/veh-details.component';
 import { CreatevehComponent } from './createveh/createveh.component';
 import { ParentComponent } from './parent/parent.component';
 import { ChildComponent } from './child/child.component';
+import { CartComponent } from './cart/cart.component';
+import { RatingComponent } from './rating/rating.component';
+import { StarComponent } from './star/star.component';
+import { TextcountComponent } from './textcount/textcount.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -67,7 +71,11 @@ import { ChildComponent } from './child/child.component';
     VehDetailsComponent,
     CreatevehComponent,
     ParentComponent,
-    ChildComponent
+    ChildComponent,
+    CartComponent,
+    RatingComponent,
+    StarComponent,
+    TextcountComponent
   ],
   imports: [
     BrowserModule,

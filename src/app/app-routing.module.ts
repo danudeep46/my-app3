@@ -33,6 +33,11 @@ import { AccountDetailsComponent } from './account-details/account-details.compo
 import { VehDetailsComponent } from './veh-details/veh-details.component';
 import { CreatevehComponent } from './createveh/createveh.component';
 import { ParentComponent } from './parent/parent.component';
+import { ItemsComponent } from './items/items.component';
+import { NavComponent } from './nav/nav.component';
+import { CartComponent } from './cart/cart.component';
+import { RatingComponent } from './rating/rating.component';
+import { TextcountComponent } from './textcount/textcount.component';
 const routes: Routes = [
   {path: 'login', component:LoginComponent},
    {path: '', component:LoginComponent},
@@ -55,8 +60,13 @@ const routes: Routes = [
    {path:"createaccount",component:CreateaccountComponent},
    {path:"createveh",component:CreatevehComponent},
    {path:'flipkart',component:FlipkartComponent},
+   {path:"textcount",component:TextcountComponent},
+   {path:"rating",component:RatingComponent},
    {path:'user-form', canDeactivate:[NotiGuard],component:UserFormComponent},
    {path:'mail',component:MailComponent},
+   {path:"items",component:ItemsComponent},
+   {path:"nav",component:NavComponent},
+   {path:"cart",component:CartComponent},
    {path:'activity',component:ActivityComponent},
    {path:"parent",component:ParentComponent},
   
