@@ -1,0 +1,26 @@
+<h1 *ngIf="!id">CREATE Vehicle FORM</h1>
+<h1 *ngIf="id">UPDATE Vehicle FORM</h1>
+
+<form [formGroup]="vehicleForm">
+    <label>vehicle</label>
+    <input type="text" formControlName="Vehicle">
+    <br>
+    <label>model</label>
+    <input type="text" formControlName="model">
+    <br>
+    <label>type</label>
+    <input type="text" formControlName="type">
+    <br>
+    <label>fuel</label>
+    <input type="text" formControlName="fuel">
+    <br>
+    <label>color</label>
+    <input type="text" formControlName="color">
+    <br>
+    <label>Image</label>
+    <input type="text" formControlName="image">
+    <br>
+    <button (click)="submit()">{{id ? 'update' : 'create'}}</button>
+</form>
+
+<form f></form>

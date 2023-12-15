@@ -1,0 +1,9 @@
+label{
+    display: inline-block;
+    padding: 25px;
+    width: 100px;
+    margin-top: 50px;
+}
+button{
+    margin-left: 400px;
+}

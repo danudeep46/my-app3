@@ -45,7 +45,12 @@
                 <img src="{{vehicles.image}}" alt="">
             </td>
             <td>{{vehicles.id}}</td>
+         <td>
+           <tr> <button (click)="view(vehicles.id)">VIEW</button>
+            <button (click)="edit(vehicles.id)">EDIT</button>
             <button (click)="delete(vehicles.id)">Delte</button>
+        </tr>
+         </td>   
             
            
 

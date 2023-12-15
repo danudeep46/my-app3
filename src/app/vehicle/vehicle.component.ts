@@ -3,6 +3,7 @@ import { Observable } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
 import { VehicleService } from '../vehicle.service';
 import { AnonymousSubject } from 'rxjs/internal/Subject';
+import { Router } from '@angular/router';
 
 
 
@@ -19,7 +20,7 @@ export class VehiclesComponent {
   public order:any="";
   public pageno:any='';
   
-  constructor(private _vehicleService:VehicleService){
+  constructor(private _vehicleService:VehicleService, private _router:Router){
   _vehicleService.getUsers().subscribe(
     (data:any)=>{
       this.vehicle=data;
@@ -73,7 +74,12 @@ delete(id:string){
     }
   )
 }
-
+view(id:number){
+this._router.navigateByUrl("/dashboard/veh-details/"+id)
+}
+edit(id:number){
+  this._router.navigateByUrl("/dashboard/createveh/"+id)
+}
  
 }
 

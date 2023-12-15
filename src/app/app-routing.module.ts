@@ -28,6 +28,11 @@ import { StudentComponent } from './student/student.component';
 import { AuthenticationGuard } from './authentication.guard';
 import { NotiGuard } from './noti.guard';
 import { UserDetailsComponent } from './user-details/user-details.component';
+import { CreateaccountComponent } from './createaccount/createaccount.component';
+import { AccountDetailsComponent } from './account-details/account-details.component';
+import { VehDetailsComponent } from './veh-details/veh-details.component';
+import { CreatevehComponent } from './createveh/createveh.component';
+import { ParentComponent } from './parent/parent.component';
 const routes: Routes = [
   {path: 'login', component:LoginComponent},
    {path: '', component:LoginComponent},
@@ -47,12 +52,19 @@ const routes: Routes = [
     {path:'products',component:ProductsComponent},
    {path:'anudeep',component:AnudeepComponent},
    {path:'student',component:StudentComponent},
+   {path:"createaccount",component:CreateaccountComponent},
+   {path:"createveh",component:CreatevehComponent},
    {path:'flipkart',component:FlipkartComponent},
    {path:'user-form', canDeactivate:[NotiGuard],component:UserFormComponent},
    {path:'mail',component:MailComponent},
    {path:'activity',component:ActivityComponent},
+   {path:"parent",component:ParentComponent},
+  
    {path:"user-details/:id",component:UserDetailsComponent},
-   {path:"create-user/:id",component:CreateUserComponent},
+   {path:"createaccount/:id",component:CreateaccountComponent},
+   {path:"account-details/:id",component:AccountDetailsComponent},
+   {path:"veh-details/:id",component:VehDetailsComponent},
+   {path:"createveh/:id",component:CreatevehComponent},
     {path: 'StructuralDirectives', component:StructuralDirectivescomponentComponent},
 ]},
 ];

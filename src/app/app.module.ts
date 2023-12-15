@@ -28,6 +28,13 @@ import { UserFormComponent } from './user-form/user-form.component';
 import { StudentComponent } from './student/student.component';
 import { PricePipe } from './price.pipe';
 import { UserDetailsComponent } from './user-details/user-details.component';
+// import { CreatevehiclesComponent } from './createvehicles/createvehicles.component';
+import { CreateaccountComponent } from './createaccount/createaccount.component';
+import { AccountDetailsComponent } from './account-details/account-details.component';
+import { VehDetailsComponent } from './veh-details/veh-details.component';
+import { CreatevehComponent } from './createveh/createveh.component';
+import { ParentComponent } from './parent/parent.component';
+import { ChildComponent } from './child/child.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -53,7 +60,14 @@ import { UserDetailsComponent } from './user-details/user-details.component';
     UserFormComponent,
     StudentComponent,
     PricePipe,
-    UserDetailsComponent
+    UserDetailsComponent,
+    // CreatevehiclesComponent,
+    CreateaccountComponent,
+    AccountDetailsComponent,
+    VehDetailsComponent,
+    CreatevehComponent,
+    ParentComponent,
+    ChildComponent
   ],
   imports: [
     BrowserModule,

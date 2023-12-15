@@ -36,6 +36,8 @@
             </td>
             <td>{{accounts.id}}</td>
             <td>
+                <button (click)="edit(accounts.id)">Edit</button>
+                <button (click)="view(accounts.id)">View</button>
                 <button (click)="delete(accounts.id)">Delete</button>
             </td>
             
