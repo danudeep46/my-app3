@@ -39,6 +39,7 @@ import { CartComponent } from './cart/cart.component';
 import { RatingComponent } from './rating/rating.component';
 import { StarComponent } from './star/star.component';
 import { TextcountComponent } from './textcount/textcount.component';
+import { AboutModule } from './about/about.module';
 @NgModule({
   declarations: [
     AppComponent,
@@ -83,6 +84,7 @@ import { TextcountComponent } from './textcount/textcount.component';
     FormsModule,
     HttpClientModule,
     ReactiveFormsModule,
+    AboutModule
   ],
   providers: [],
   bootstrap: [AppComponent]

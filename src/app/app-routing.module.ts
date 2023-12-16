@@ -38,6 +38,7 @@ import { NavComponent } from './nav/nav.component';
 import { CartComponent } from './cart/cart.component';
 import { RatingComponent } from './rating/rating.component';
 import { TextcountComponent } from './textcount/textcount.component';
+import { AboutCompanyComponent } from './about/about-company/about-company.component';
 const routes: Routes = [
   {path: 'login', component:LoginComponent},
    {path: '', component:LoginComponent},
@@ -69,7 +70,7 @@ const routes: Routes = [
    {path:"cart",component:CartComponent},
    {path:'activity',component:ActivityComponent},
    {path:"parent",component:ParentComponent},
-  
+  {path:"about-company",component:AboutCompanyComponent},
    {path:"user-details/:id",component:UserDetailsComponent},
    {path:"createaccount/:id",component:CreateaccountComponent},
    {path:"account-details/:id",component:AccountDetailsComponent},
